@@ -25,7 +25,8 @@ export default function Model(props) {
     // Gamau Kehujanan
     // mesh.rotation.set(0, 0.9, 0)
     // mesh.position.set(2.3, 3, 1.9)
-    mesh.position.set(0, 1.2, 5.5)
+    mesh.position.set(10.5, 1.3, 10)
+    mesh.rotation.set(0, 3.5, 0)
     mesh.scale.set(8, 8, 8)
   })
   return (

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Frog Statue
+* source:	https://sketchfab.com/3d-models/frog-statue-123d8e7e99c14d699d3913e3f84458d5
+* author:	David Wigforss (https://sketchfab.com/dwigfor)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Frog Statue" (https://sketchfab.com/3d-models/frog-statue-123d8e7e99c14d699d3913e3f84458d5) by David Wigforss (https://sketchfab.com/dwigfor) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

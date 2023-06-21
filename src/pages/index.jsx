@@ -25,6 +25,7 @@ import Kucing from "@/components/Kucing";
 import Bedroom from "@/components/bedroom";
 import Models from "@/components/bedroom";
 import Winterhouse from "@/components/WInterhouse";
+import { Frog } from "@/components/Frog";
 
 export default function Home() {
   const data = useWeatherStore();
@@ -74,7 +75,7 @@ export default function Home() {
   return (
     <div className="min-w-[100vw] min-h-[100vh] bg-slate-600">
       <Head>
-        <title>Weathery</title>
+        <title>The Four Ancient Islands</title>
         <meta
           name="description"
           content="Weathery, forcast app with interactive 3D design"
@@ -130,6 +131,8 @@ export default function Home() {
 
             <Models />
             <Winterhouse />
+            <Frog />
+            <Kucing />
           </Suspense>
           <Floor position={[0, -1, 0]} />
         </Canvas>
