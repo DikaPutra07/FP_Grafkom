@@ -1,0 +1,31 @@
+{
+  "name": "fp-nasi-padang",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@react-three/cannon": "^6.5.0",
+    "@react-three/drei": "^9.40.0",
+    "@react-three/fiber": "^8.9.1",
+    "axios": "^1.2.0",
+    "next": "13.0.3",
+    "nice-color-palettes": "^3.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.147.0",
+    "threejs-weather": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
+  }
+}
