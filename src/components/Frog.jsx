@@ -22,7 +22,7 @@ export function Frog(props) {
   });
   return (
     <group ref={meshRef} {...props} dispose={null}>
-      <mesh geometry={nodes.geo1_MAT_Statue_Frog_0.geometry} material={materials.MAT_Statue_Frog} scale={15} />
+      <mesh geometry={nodes.geo1_MAT_Statue_Frog_0.geometry} material={materials.MAT_Statue_Frog} scale={25} />
     </group>
   )
 }
