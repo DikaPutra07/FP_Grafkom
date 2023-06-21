@@ -8,13 +8,13 @@ function Island({position, scale}) {
     useFrame(()=>{
         var mesh = meshRef.current
         mesh.position.set(0, 0, 0)
-        mesh.scale.set(10, 1.5, 10)
+        mesh.scale.set(20, 1.5, 20)
     })
   
   return (
     <mesh ref={meshRef} recieveShadow={true} castShadow={true}>
       <sphereBufferGeometry />
-      <meshPhysicalMaterial  color={"#49be25"} />
+      <meshPhysicalMaterial  color={"#ffffff"} />
     </mesh>
   );
 }

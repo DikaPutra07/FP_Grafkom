@@ -5,12 +5,24 @@ Command: npx gltfjsx@6.2.3 ../public/bedroom.glb
 
 import React, { useRef } from 'react'
 import { useGLTF, OrthographicCamera } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+
 
 export default function Models(props) {
-  const { nodes, materials } = useGLTF('/bedroom.glb')
+  const { nodes, materials } = useGLTF('/bed.glb')
+
+  const meshRef = useRef();
+
+  useFrame(() => {
+    var mesh = meshRef.current;
+    mesh.position.set(0, 2, 0);
+    mesh.rotation.set(0, Math.PI * 3/2, 0);
+    mesh.scale.set(5, 2.5, 5);
+  });
+
   return (
-    <group {...props} dispose={null}>
-      <pointLight intensity={54351.413} decay={2} position={[4.068, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} scale={[0.999, 0.996, 0.998]} />
+    <group ref={meshRef} {...props} dispose={null}>
+      <pointLight intensity={1.413} decay={2} position={[4.068, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} scale={[0.999, 0.996, 0.998]} />
       <OrthographicCamera makeDefault={false} far={100} near={0.1} position={[-1.599, 2.313, -3.567]} rotation={[-2.689, -0.413, -2.949]} />
       <mesh geometry={nodes.Plane.geometry} material={materials['Material.013']} position={[0.059, 0, 0]} scale={[1.024, 1, 1]} />
       <mesh geometry={nodes.Plane001.geometry} material={materials['Material.012']} position={[0.837, 0.029, 0]} scale={[0.127, 0.277, 1]} />
@@ -21,7 +33,6 @@ export default function Models(props) {
         <mesh geometry={nodes.Plane001_1.geometry} material={materials['Material.006']} />
         <mesh geometry={nodes.Plane001_2.geometry} material={materials['Material.007']} />
       </group>
-      <mesh geometry={nodes.Plane006.geometry} material={nodes.Plane006.material} position={[-0.728, -0.175, -0.71]} scale={-5.787} />
       <mesh geometry={nodes.Plane007.geometry} material={nodes.Plane007.material} position={[0.751, 0.971, -0.316]} scale={[0.161, 0.455, 0.455]} />
       <mesh geometry={nodes.Cube001.geometry} material={materials['Material.010']} position={[0.756, 1.099, -0.219]} scale={0.086} />
       <mesh geometry={nodes.Sphere.geometry} material={materials['Material.009']} position={[0.361, 1.469, 0.302]} rotation={[0, 0.075, 0]} scale={[0.101, 0.162, 0.092]} />

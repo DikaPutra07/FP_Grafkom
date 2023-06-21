@@ -24,6 +24,7 @@ import Sun from "@/components/Sun";
 import Kucing from "@/components/Kucing";
 import Bedroom from "@/components/bedroom";
 import Models from "@/components/bedroom";
+import Winterhouse from "@/components/WInterhouse";
 
 export default function Home() {
   const data = useWeatherStore();
@@ -116,7 +117,7 @@ export default function Home() {
           <OrbitControls
             enablePan={false}
             maxDistance={25}
-            minDistance={15}
+            minDistance={8}
             maxPolarAngle={1.5}
             enableDamping={true}
             target={[0, 1, 0]}
@@ -168,10 +169,11 @@ export default function Home() {
             {/* <Box rotateX={3} rotateY={0.2} /> */}
             {/* <Roof />
             <House /> */}
-            <Lamp />
+            {/* <Lamp /> */}
             <Island />
             {/* <Bedroom /> */}
             <Models />
+            <Winterhouse />
           </Suspense>
           <Floor position={[0, -1, 0]} />
         </Canvas>
