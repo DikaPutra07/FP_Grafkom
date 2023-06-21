@@ -23,6 +23,7 @@ import Moon from "@/components/Moon";
 import Sun from "@/components/Sun";
 import Kucing from "@/components/Kucing";
 import Bedroom from "@/components/bedroom";
+import Models from "@/components/bedroom";
 
 export default function Home() {
   const data = useWeatherStore();
@@ -168,8 +169,9 @@ export default function Home() {
             {/* <Roof />
             <House /> */}
             <Lamp />
-            {/* <Island /> */}
-            <Bedroom />
+            <Island />
+            {/* <Bedroom /> */}
+            <Models />
           </Suspense>
           <Floor position={[0, -1, 0]} />
         </Canvas>
