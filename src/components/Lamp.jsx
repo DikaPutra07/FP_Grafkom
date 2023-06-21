@@ -8,7 +8,7 @@ export default function Lamp(props) {
   const { nodes, materials } = useGLTF('./assets/lamp2.gltf')
   useFrame(()=>{
     var mesh = meshRef.current
-    mesh.position.set(4, 0, 0)
+    mesh.position.set(-5, 0, -9)
     mesh.scale.set(1, 1, 1)
 })
   return (

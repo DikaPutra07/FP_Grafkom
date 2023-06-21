@@ -15,14 +15,14 @@ export default function Models(props) {
 
   useFrame(() => {
     var mesh = meshRef.current;
-    mesh.position.set(0, 2, 0);
-    mesh.rotation.set(0, Math.PI * 3/2, 0);
-    mesh.scale.set(5, 2.5, 5);
+    mesh.position.set(10, 1, 10);
+    mesh.rotation.set(0, 225 , 0);
+    mesh.scale.set(2.75, 1.35, 2.75);
   });
 
   return (
     <group ref={meshRef} {...props} dispose={null}>
-      <pointLight intensity={1.413} decay={2} position={[4.068, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} scale={[0.999, 0.996, 0.998]} />
+      <pointLight intensity={0.1} decay={2} position={[4.068, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} scale={[0.999, 0.996, 0.998]} />
       <OrthographicCamera makeDefault={false} far={100} near={0.1} position={[-1.599, 2.313, -3.567]} rotation={[-2.689, -0.413, -2.949]} />
       <mesh geometry={nodes.Plane.geometry} material={materials['Material.013']} position={[0.059, 0, 0]} scale={[1.024, 1, 1]} />
       <mesh geometry={nodes.Plane001.geometry} material={materials['Material.012']} position={[0.837, 0.029, 0]} scale={[0.127, 0.277, 1]} />

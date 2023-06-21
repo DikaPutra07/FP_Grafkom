@@ -42,33 +42,19 @@ export default function Home() {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  // const search = () => {
-  //   fetch(`${api.base}weather?q=${api.cityName}&units=metric&APPID=${api.key}`)
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setWeather(result);
-  //     });
-  // };
   let date = new Date();
-  // date.setHours(7);
   let hour = date.getHours() - 6;
   let realHour = date.getHours();
   let minutes = date.getMinutes();
   if (minutes == 0) minutes = 1;
-  // console.log(hour, minutes)
   let degree = 360 * ((hour * 60 + minutes) / (24 * 60));
   let radian = (Math.PI * degree) / 180;
 
   let sunPositionX = 10 * Math.cos(radian);
   let sunPositionY = 10 * Math.sin(radian);
-  // console.log(sunPositionX, sunPositionY)
 
-  // React.useEffect(() => {
-  //   weather === null && search();
-  //   setInterval(() => search(), 100000);
-  // }, []);
+  console.log(sunPositionX, sunPositionY);
 
-  // console.log(sunPositionX, sunPositionY);
 
   React.useEffect(() => {
     if (realHour > 6 && realHour < 16) {
@@ -124,54 +110,24 @@ export default function Home() {
           />
 
           <ambientLight color={"white"} intensity={1} />
-          <LightBulb position={[4, 5.5, 0]} scale={[0.8, 0.8, 0.8]} />
-          <SkyEnv sunPosition={[sunPositionX, sunPositionY, 0]} sky={sky} />
+          {/* <LightBulb position={[4, 5.5, 0]} scale={[0.8, 0.8, 0.8]} /> */}
+
+          <SkyEnv s
+            sunPosition={[sunPositionX, sunPositionY, 0]}
+            sky={sky}
+          />
+
           <Suspense fallback={null}>
             {console.log(realHour)}
-            {/* {realHour > 6 && realHour < 18 ? <Sun /> : <Moon />} */}
-            {weather?.weather[0].main === "Rain" && <Rain />}
-            {/* {"Snow" === "Snow" && <Snow />} */}
-            {/* {weather?.clouds.all < 40
-              ? Array.from(Array(1).keys()).map((i) => (
-                  <Cloud
-                    key={i}
-                    position={[
-                      randomIntFromInterval(-15, 15),
-                      randomIntFromInterval(11, 13),
-                      randomIntFromInterval(-15, 15),
-                    ]}
-                  />
-                ))
-              : weather?.clouds.all >= 40 && weather?.clouds.all < 70
-              ? Array.from(Array(2).keys()).map((i) => (
-                  <Cloud
-                    key={i}
-                    position={[
-                      randomIntFromInterval(-15, 15),
-                      randomIntFromInterval(11, 13),
-                      randomIntFromInterval(-15, 15),
-                    ]}
-                  />
-                ))
-              : Array.from(Array(3).keys()).map((i) => (
-                  <Cloud
-                    key={i}
-                    position={[
-                      randomIntFromInterval(-15, 15),
-                      randomIntFromInterval(11, 13),
-                      randomIntFromInterval(-15, 15),
-                    ]}
-                  />
-                ))} */}
-            {/* <Model /> */}
-            {/* <Kucing /> */}
             <Snow />
-            {/* <Box rotateX={3} rotateY={0.2} /> */}
-            {/* <Roof />
-            <House /> */}
-            {/* <Lamp /> */}
-            <Island />
-            {/* <Bedroom /> */}
+            <Lamp/>
+            <Suspense fallback={null}>
+              <Island position={[-10, 0, -10]} scale={[8, 1, 8]} />
+              <Island position={[10, 0, -10]} scale={[8, 1, 8]} />
+              <Island position={[-10, 0, 10]} scale={[8, 1, 8]} />
+              <Island position={[10, 0, 10]} scale={[8, 1, 8]} />
+            </Suspense>
+
             <Models />
             <Winterhouse />
           </Suspense>

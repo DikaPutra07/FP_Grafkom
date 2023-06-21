@@ -7,9 +7,9 @@ export default function Model(props) {
     const { nodes, materials } = useGLTF("./assets/winter-house.glb");
     useFrame(() => {
         var mesh = meshRef.current;
-        mesh.position.set(0, 1.5, -2.5);
-        mesh.rotation.set(0, Math.PI, 0);
-        mesh.scale.set(0.48, 0.3, 0.4);
+        mesh.position.set(-10, 1, -10);
+        mesh.rotation.set(0, 315, 0);
+        mesh.scale.set(0.15, 0.15, 0.15);
     }
     );
 

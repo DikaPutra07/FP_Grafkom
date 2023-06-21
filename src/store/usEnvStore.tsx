@@ -1,6 +1,6 @@
 export default function useEnvStore() {
     const env = {
-        sky : {
+        sky: {
             day : {
                 distance:1500,
                 turbidity:50,
@@ -29,7 +29,7 @@ export default function useEnvStore() {
                 mieCoefficient:1,
                 mieDirectionalG:0,
                 inclination:0,
-                azimuth:0.25,
+                azimuth: 0.25,
             }
         }
     };
