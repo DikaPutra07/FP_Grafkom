@@ -19,7 +19,6 @@ function Snow(props) {
     const meshRef = useRef()
     const prevRef = useRef()
 
-    // const colorArray = Float32Array.from(new Array(3000).fill(1))
 
 
     // set initial position for the rain drops
@@ -38,24 +37,12 @@ function Snow(props) {
     }
 
     generateDropPosition()
-    
-    // function ModifyDropPosition() {
-    //     for (let x = 0; x < 20; x++)
-    //         for (let y = 0; y < 20; y++)
-    //             for (let z = 0; z < 20; z++) {
-    //                 dropPositionX[x*400+y*20+z] = randomFloatFromInterval(-15, 25)
-    //                 dropPositionY[x*400+y*20+z] = randomFloatFromInterval(1, 15)
-    //                 dropPositionZ[x*400+y*20+z] = randomFloatFromInterval(-15, 25)
-    //             }
-    // }
+
 
     var tick = 0
     var init = true
     useFrame((state) => {
         tick += 0.03
-        // if ((tick%1)==0){
-        //     // ModifyDropPosition()
-        // }
         meshRef.current.rotation.x = 0
         meshRef.current.rotation.y = 0
         let i = 0
@@ -64,7 +51,6 @@ function Snow(props) {
                 for (let z = 0; z < 20; z++) {
                     const id = i++
                     tempObject.position.set(dropPositionX[x*400+y*20+z], dropPositionY[x*400+y*20+z]-(tick)%20, dropPositionZ[x*400+y*20+z])
-                    // if ((tick%1)==0) console.log("DROP POSITIONs: ", x*400+y*20+z, " IS ",dropPositionX[x*400+y*20+z], dropPositionY[x*400+y*20+z], dropPositionZ[x*400+y*20+z])
                     tempObject.rotation.y = 0
                     tempObject.rotation.z = 0
                     tempObject.updateMatrix()

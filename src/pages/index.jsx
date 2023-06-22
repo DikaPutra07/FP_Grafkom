@@ -1,36 +1,24 @@
 import React, { useState } from "react";
-// import { Rain, useTheme } from 'threejs-weather'
-import Box from "@/components/Box";
 import Floor from "@/components/Floor";
-import House from "@/components/House";
 import Island from "@/components/Island";
 import LightBulb from "@/components/LightBulb";
-import Model from "@/components/Model";
-import Rain from "@/components/Rain";
 import Lamp from "@/components/Lamp";
-import Roof from "@/components/Roof";
-import WeatherWidget from "@/components/WheaterWidget";
+
 import { OrbitControls, Text } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Head from "next/head";
 import { Suspense } from "react";
 import SkyEnv from "@/components/Sky";
 import Snow from "@/components/Snow";
-import Cloud from "@/components/Cloud";
-import useWeatherStore from "../store/useWeatherStore";
 import useEnvStore from "../store/usEnvStore";
-import Moon from "@/components/Moon";
-import Sun from "@/components/Sun";
 import Kucing from "@/components/Kucing";
-import Bedroom from "@/components/bedroom";
 import Models from "@/components/bedroom";
 import Winterhouse from "@/components/WInterhouse";
 import { Frog } from "@/components/Frog";
+import Igloo from "@/components/Igloo";
 
 export default function Home() {
-  const data = useWeatherStore();
   const env = useEnvStore()
-  const [weather, setWeather] = useState(null);
   const [sky, setSky] = useState(env.sky.day);
 
   const api = {
@@ -90,7 +78,6 @@ export default function Home() {
             <li>🖱️ Drag/scroll to adjust the camera</li>
           </ul>
         </div>
-        {/* <WeatherWidget {...weather} /> */}
         <Canvas
           color="white"
           shadows={true}
@@ -99,7 +86,6 @@ export default function Home() {
             position: [0, 0, 0],
             fov: 75,
           }}
-          // {...bind()}
         >
           <OrbitControls
             enablePan={false}
@@ -133,6 +119,7 @@ export default function Home() {
             <Winterhouse />
             <Frog />
             <Kucing />
+            <Igloo />
           </Suspense>
           <Floor position={[0, -1, 0]} />
         </Canvas>

@@ -16,7 +16,7 @@ function Island({position, scale}) {
   return (
     <mesh ref={meshRef} recieveShadow={true} castShadow={true}>
       <sphereBufferGeometry />
-      <meshPhysicalMaterial  color={"#ffffff"} />
+      <meshPhysicalMaterial  color={"#BEBEBE"} />
     </mesh>
   );
 }
